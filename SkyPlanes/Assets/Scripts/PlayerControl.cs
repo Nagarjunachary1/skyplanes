@@ -7,6 +7,10 @@ public class PlayerControl : MonoBehaviour
 
 
     public float DragSpeed = 1.1f;
+    private Vector3 initialPosition,mousePos, mouseDragPos;
+    
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -14,9 +18,20 @@ public class PlayerControl : MonoBehaviour
 
     }
 
-    Vector3 initialPosition;
 
 
+    // Update is called once per frame
+    void Update()
+    {
+
+
+
+        MControls();
+        RestricToBoundaries();
+
+
+    
+    }
 
 
 
@@ -26,41 +41,27 @@ public class PlayerControl : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            mousePos = GameHandler.mee.mainCam.ScreenToWorldPoint(Input.mousePosition); //calculating mouse position in the worldspace
+            mousePos = GameHandler.Instance.mainCam.ScreenToWorldPoint(Input.mousePosition); //calculating mouse position in the worldspace
             mousePos.z = transform.position.z;
-            Vector3 myPosition = transform.position;
 
-            initialPosition = (myPosition - mousePos);
+            initialPosition = (transform.position - mousePos);
 
         }
         else if (Input.GetMouseButton(0))
         {
-            mouseDragPos = GameHandler.mee.mainCam.ScreenToWorldPoint(Input.mousePosition);
+            mouseDragPos = GameHandler.Instance.mainCam.ScreenToWorldPoint(Input.mousePosition);
             mouseDragPos.z = transform.position.z;
 
             if (mouseDragPos != mousePos)
             {
-                Vector3 newPosition = mouseDragPos*(DragSpeed) + initialPosition;
-                transform.position = newPosition;
+                transform.position = mouseDragPos * (DragSpeed) + initialPosition;
 
 
             }
         }
 
 
-       
-    }
 
-    private Vector3 mousePos, mouseDragPos;
-    // Update is called once per frame
-    void Update()
-    {
-
-
-
-        MControls();
-        RestricToBoundaries();
-    
     }
 
     private Vector3 tempPos;
