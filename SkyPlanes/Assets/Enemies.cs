@@ -2,25 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameHandler : MonoBehaviour
+public class Enemies : MonoBehaviour
 {
-
-    public static GameHandler Instance;
-    public Camera mainCam;
-    public GameObject All_BulletsHolder;
-
-    public Enemies[] AllEnemies;
+    public Animator M_anim;
+    public float Speed;
    
 
     // Start is called before the first frame update
     void Start()
     {
-        Instance = this; 
+        
+        M_anim.speed = Speed;
     }
+
+   
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

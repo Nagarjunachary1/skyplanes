@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 38455190}
   - component: {fileID: 38455192}
   - component: {fileID: 38455191}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plane_strength_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 52642606}
   - component: {fileID: 52642607}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,8 +138,8 @@ MonoBehaviour:
   MBullet: {fileID: 7615727429659553832, guid: 45a3aa2bbce339849aa6f0906f7f8db2, type: 3}
   FireDelay: 0.1
   MoveDirection: {x: 0, y: 0, z: 0}
-  BulletSpeed: 10
-  MaxPool_bullets: 15
+  BulletSpeed: 15
+  MaxPool_bullets: 50
   Bullets_list: []
 --- !u!1 &114537921
 GameObject:
@@ -151,7 +151,7 @@ GameObject:
   m_Component:
   - component: {fileID: 114537922}
   - component: {fileID: 114537923}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 203889780}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: machineGun3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 486686080}
   - component: {fileID: 486686081}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,8 +271,8 @@ MonoBehaviour:
   MBullet: {fileID: 7615727429659553832, guid: 45a3aa2bbce339849aa6f0906f7f8db2, type: 3}
   FireDelay: 0.1
   MoveDirection: {x: 0, y: 0, z: 0}
-  BulletSpeed: 10
-  MaxPool_bullets: 15
+  BulletSpeed: 15
+  MaxPool_bullets: 50
   Bullets_list: []
 --- !u!1 &534180183
 GameObject:
@@ -284,7 +284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 534180184}
   - component: {fileID: 534180185}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 628311540}
   - component: {fileID: 628311541}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 702676083}
   - component: {fileID: 702676084}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,7 +431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 743373237}
   - component: {fileID: 743373238}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -480,7 +480,7 @@ GameObject:
   m_Component:
   - component: {fileID: 784267209}
   - component: {fileID: 784267210}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 789978711}
   - component: {fileID: 789978712}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580,7 +580,7 @@ GameObject:
   - component: {fileID: 792547557}
   - component: {fileID: 792547556}
   - component: {fileID: 792547555}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main_gun (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -670,7 +670,7 @@ GameObject:
   m_Component:
   - component: {fileID: 844286369}
   - component: {fileID: 844286370}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -719,7 +719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1060393145}
   - component: {fileID: 1060393146}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -767,7 +767,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1098670569}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: machineGun2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -803,7 +803,7 @@ GameObject:
   - component: {fileID: 1119646450}
   - component: {fileID: 1119646449}
   - component: {fileID: 1119646448}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main_gun (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -893,7 +893,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1199740366}
   - component: {fileID: 1199740367}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -942,7 +942,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1220636338}
   - component: {fileID: 1220636339}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -991,7 +991,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1224062459}
   - component: {fileID: 1224062460}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1040,7 +1040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1235028840}
   - component: {fileID: 1235028841}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1089,7 +1089,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1433208860}
   - component: {fileID: 1433208861}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1138,7 +1138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1435067798}
   - component: {fileID: 1435067799}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1186,7 +1186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1552474894}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: machineGun5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1224,7 +1224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1697500460}
   - component: {fileID: 1697500461}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1273,7 +1273,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1742590204}
   - component: {fileID: 1742590205}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1321,7 +1321,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1820311535}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: machineGun4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1357,7 +1357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1860976330}
   - component: {fileID: 1860976331}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1406,7 +1406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1917634443}
   - component: {fileID: 1917634444}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1454,7 +1454,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1962115043}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: machineGun1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1487,7 +1487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2000407117}
   - component: {fileID: 2000407118}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1722,7 +1722,7 @@ GameObject:
   - component: {fileID: 6883208290429753576}
   - component: {fileID: 8794375366506959693}
   - component: {fileID: 8175454057750088568}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: r_gun (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1941,7 +1941,7 @@ GameObject:
   - component: {fileID: 8057230625033522840}
   - component: {fileID: 4608047187354936829}
   - component: {fileID: 8752019329124846541}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: r_gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2033,7 +2033,7 @@ GameObject:
   - component: {fileID: 1285570323316436496}
   - component: {fileID: 2414592694005916727}
   - component: {fileID: 3467279501716473771}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: r_gun (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2124,7 +2124,7 @@ GameObject:
   - component: {fileID: 4921009876021018689}
   - component: {fileID: 6280920923777765694}
   - component: {fileID: 2002743794}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2206,7 +2206,7 @@ GameObject:
   - component: {fileID: 764992060916717139}
   - component: {fileID: 8798917006442376135}
   - component: {fileID: 8447857754096622820}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main_gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2390,7 +2390,7 @@ GameObject:
   - component: {fileID: 7598883012882643135}
   - component: {fileID: 8511341440455647233}
   - component: {fileID: 4390415682332000175}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: r_gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}

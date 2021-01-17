@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 8801509089360894374}
   - component: {fileID: 7615727429659553832}
   - component: {fileID: -3659910436458288466}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bullet1
-  m_TagString: Untagged
+  m_TagString: playerbullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,7 +89,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5450024309737213349}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
+  MRigidbody: {fileID: -3659910436458288466}
 --- !u!54 &-3659910436458288466
 Rigidbody:
   m_ObjectHideFlags: 0

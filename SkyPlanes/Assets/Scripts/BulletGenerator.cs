@@ -31,6 +31,7 @@ public class BulletGenerator : MonoBehaviour
         else
         {
             Temp_bullet = Bullets_list[B_count];
+            Temp_bullet.gameObject.SetActive(true);
             B_count++;
             if (B_count>= MaxPool_bullets)
             {

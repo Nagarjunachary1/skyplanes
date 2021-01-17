@@ -2,20 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameHandler : MonoBehaviour
+public class LevelData : MonoBehaviour
 {
-
-    public static GameHandler Instance;
-    public Camera mainCam;
-    public GameObject All_BulletsHolder;
-
-    public Enemies[] AllEnemies;
-   
-
+    public List<GameObject> LevelWaves;
     // Start is called before the first frame update
     void Start()
     {
-        Instance = this; 
+        
     }
 
     // Update is called once per frame
