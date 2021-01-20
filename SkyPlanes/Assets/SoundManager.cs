@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public AudioClip MenuClip, gameplayClip, BtnClip, WinClip, FailClip;
+    public AudioClip MenuClip, gameplayClip, BtnClip, WinClip, FailClip,FinalClip,powerupClip, coinClip,enemyExplosion_clip;
 
-    public AudioSource BgSource, Btn1Source, Btn2Source;
+    public AudioSource BgSource, Btn1Source, Btn2Source, Btn3Source,ExplosionSource;
     // Start is called before the first frame update
 
     public static SoundManager Instance;
@@ -34,8 +34,17 @@ public class SoundManager : MonoBehaviour
         Btn2Source.clip = val;
         Btn2Source.Play();
     }
-
-   
+    public void PlayBtn3_Clip(AudioClip val)
+    {
+        Btn3Source.clip = val;
+        Btn3Source.Play();
+    }
+    public void PlayBtn4_Clip(AudioClip val)
+    {
+        ExplosionSource.clip = val;
+        ExplosionSource.Play();
+    }
+    
     // Update is called once per frame
     void Update()
     {

@@ -61,7 +61,7 @@ public class ShootingHandler : MonoBehaviour
                 PlayerHealth -= val;
                 // Debug.Log("player damage " + PlayerHealth);
 
-
+                CameraShake.Instance.Shake();
                 UiHandler.Instance.HealthBar.fillAmount = (PlayerHealth / MainHelath) * 1f;
                 if (PlayerHealth<20 && inblink==false)
                 {

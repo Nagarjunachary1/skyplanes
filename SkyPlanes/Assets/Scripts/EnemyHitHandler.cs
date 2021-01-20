@@ -95,7 +95,8 @@ public class EnemyHitHandler : MonoBehaviour
         TempDamgeObj = GameObject.Instantiate(BlastObj);
         
         TempDamgeObj.transform.position = this.transform.position;
-        
+                    SoundManager.Instance.PlayBtn4_Clip(SoundManager.Instance.enemyExplosion_clip);
+
 
         if (ISFinalEnemyPlane)
         {

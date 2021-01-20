@@ -15,7 +15,6 @@ public class GameHandler : MonoBehaviour
     public Enemies[] AllEnemies;
     [HideInInspector]
     public bool IsCompleted, IsFail;
-
     public GameObject FinalParticles;
     public List<GameObject> AllCoins_list;
     public List<ParticleSystem> CommonDamageEffect_list;
@@ -118,6 +117,8 @@ public class GameHandler : MonoBehaviour
         
         UiHandler.Instance.Messagertxt_obj.gameObject.SetActive(true);
         yield return new WaitForSeconds(1.5f);
+        SoundManager.Instance.PlayBtn1_Clip(SoundManager.Instance.FinalClip);
+
         FinalParticles.SetActive(true);
 
 

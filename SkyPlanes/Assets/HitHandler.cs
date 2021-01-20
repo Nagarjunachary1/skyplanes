@@ -29,6 +29,8 @@ public class HitHandler : MonoBehaviour
                 case ObjectType.coin:
 
                     ValueObject.TotalCoins += Coinval;
+                    SoundManager.Instance.PlayBtn1_Clip(SoundManager.Instance.coinClip);
+
                     gameObject.SetActive(false);
                     //  Debug.Log(ValueObject.TotalCoins);
                     // Destroy(this.gameObject);
@@ -40,6 +42,7 @@ public class HitHandler : MonoBehaviour
 
                     ShootingHandler.Instance.ShootingPower = 4;
                     ShootingHandler.Instance.SwitchWeapons();
+                    SoundManager.Instance.PlayBtn1_Clip(SoundManager.Instance.powerupClip);
 
                     gameObject.SetActive(false);
 
@@ -51,6 +54,7 @@ public class HitHandler : MonoBehaviour
                 case ObjectType.powerup2:
 
                     ShootingHandler.Instance.ShootingPower = 5;
+                    SoundManager.Instance.PlayBtn1_Clip(SoundManager.Instance.powerupClip);
                     ShootingHandler.Instance.SwitchWeapons();
 
                     gameObject.SetActive(false);
@@ -61,6 +65,8 @@ public class HitHandler : MonoBehaviour
 
                 case ObjectType.medicine:
                     ShootingHandler.Instance.PlayerHealth = 100;
+                    SoundManager.Instance.PlayBtn1_Clip(SoundManager.Instance.powerupClip);
+
                     gameObject.SetActive(false);
 
                     playEffect(1);
@@ -69,6 +75,7 @@ public class HitHandler : MonoBehaviour
 
                 case ObjectType.sheild:
                     ShootingHandler.Instance.ActivateShield();
+                    SoundManager.Instance.PlayBtn1_Clip(SoundManager.Instance.powerupClip);
 
                     gameObject.SetActive(false);
                     playEffect(1);

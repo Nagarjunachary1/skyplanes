@@ -76,6 +76,8 @@ public class BulletGenerator : MonoBehaviour
                 }
                 Temp_bullet.Speed = BulletSpeed;
                 Temp_bullet.BulletStrength = BulletStrength;
+                SoundManager.Instance.PlayBtn3_Clip(SoundManager.Instance.BtnClip);
+
             }
         }
         else
@@ -88,8 +90,11 @@ public class BulletGenerator : MonoBehaviour
             Temp_bullet.transform.localEulerAngles = MoveDirection;
             Temp_bullet.Speed = BulletSpeed;
             Temp_bullet.BulletStrength = BulletStrength;
+
+            SoundManager.Instance.PlayBtn3_Clip(SoundManager.Instance.BtnClip);
+
         }
-      
+
 
         if (!IsPlayer)
         {
