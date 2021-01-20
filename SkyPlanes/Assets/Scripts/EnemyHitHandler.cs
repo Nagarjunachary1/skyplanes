@@ -112,7 +112,7 @@ public class EnemyHitHandler : MonoBehaviour
 
     void CreateDamgeEffect()
     {
-        if (GameHandler.Instance.CommonDamageEffect_list.Count <= 20)
+        if (GameHandler.Instance.CommonDamageEffect_list.Count <= 5)
         {
 
             TempDamgeObj = GameObject.Instantiate(GameHandler.Instance.NormalDamge_ps);// transform.position,Quaternion.identity);
@@ -131,7 +131,7 @@ public class EnemyHitHandler : MonoBehaviour
             TempDamgeObj.Play();
 
             GameHandler.Instance.effect_count++;
-            if (GameHandler.Instance.effect_count >= 20)
+            if (GameHandler.Instance.effect_count >= 5)
             {
                 GameHandler.Instance.effect_count = 0;
             }
