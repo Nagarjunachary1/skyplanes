@@ -74,6 +74,9 @@ public class EnemyHitHandler : MonoBehaviour
                     DamageCall(this,"");
                 //}
                 Destroy(ParentObj);
+
+                ValueObject.TotalKills++;
+                GameHandler.Instance.SessionKillsCount++;
             }
         }
     }

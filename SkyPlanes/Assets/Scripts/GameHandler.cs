@@ -25,7 +25,7 @@ public class GameHandler : MonoBehaviour
     [HideInInspector]
     public int effect_count = 0;
     public int CoinsCountval = 0;
-
+    public int SessionKillsCount = 0;
     private void OnEnable()
     {
         EnemyHitHandler.DamageCall += enemyDestroy_Notification;
@@ -50,7 +50,7 @@ public class GameHandler : MonoBehaviour
     }
 
     private GameObject Temp_coins;
-    private int C_count = 0;
+    private int C_count,T_coins=0;
     void enemyDestroy_Notification(EnemyHitHandler otherObj, string val = "")
     {
         //Debug.Log("--- coins "+otherObj);
@@ -82,6 +82,8 @@ public class GameHandler : MonoBehaviour
                     C_count = 0;
                 }
             }
+
+            T_coins++;
         }
         
     }
@@ -89,13 +91,19 @@ public class GameHandler : MonoBehaviour
 
     public void OnLevelCompleteFun()
     {
-        
+        ValueObject.LastKills = SessionKillsCount;
+        ValueObject.HighKills = SessionKillsCount;
+
+        UiHandler.Instance.CoinsLC_txt.text = T_coins.ToString();
+        UiHandler.Instance.KillsLc_txt.text = ValueObject.LastKills.ToString();
         IsCompleted = true;
         StartCoroutine("opencompletepage");
     }
 
     public void OnLevelFailFun()
     {
+        ValueObject.LastKills = SessionKillsCount;
+
         IsFail = true;
         StartCoroutine("openFailpage");
 

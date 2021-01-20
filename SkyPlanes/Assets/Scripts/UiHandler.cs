@@ -8,7 +8,7 @@ public class UiHandler : MonoBehaviour
 {
     public Image HealthBar;
     public GameObject Ingame_page,Pause_page,LC_page, LF_page;
-    public Text Messagertxt_obj;
+    public Text Messagertxt_obj,CoinsLC_txt,KillsLc_txt;
     public GameObject healthBlinkObj;
 
     public static UiHandler Instance;
@@ -20,7 +20,7 @@ public class UiHandler : MonoBehaviour
 
     public void Next_Lc()
     {
-        SceneManager.LoadSceneAsync("loading");
+        SceneManager.LoadSceneAsync(ValueObject.loadingScene);
     }
     // Update is called once per frame
     void Update()

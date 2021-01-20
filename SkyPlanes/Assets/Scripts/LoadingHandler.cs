@@ -13,8 +13,8 @@ public class LoadingHandler : MonoBehaviour
 
     IEnumerator LoadScene()
     {
-        yield return new WaitForSeconds(3);
-        SceneManager.LoadSceneAsync("GamePlay");
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadSceneAsync(ValueObject.MenuScene);
     }
 
     // Update is called once per frame
