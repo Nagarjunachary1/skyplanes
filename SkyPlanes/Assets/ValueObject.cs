@@ -52,4 +52,15 @@ public class ValueObject
             PlayerPrefs.SetInt("LastKills", value);
         }
     }
+
+
+    public static int GameVolume
+    {
+        get { return PlayerPrefs.GetInt("GameVolume",1); }
+        set
+        {
+
+            PlayerPrefs.SetInt("GameVolume", value);
+        }
+    }
 }

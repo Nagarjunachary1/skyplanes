@@ -20,6 +20,8 @@ public class UiHandler : MonoBehaviour
 
     public void Next_Lc()
     {
+        SoundManager.Instance.PlayBtn1_Clip(SoundManager.Instance.BtnClip);
+
         SceneManager.LoadSceneAsync(ValueObject.loadingScene);
     }
     // Update is called once per frame

@@ -16,6 +16,7 @@ public class GameHandler : MonoBehaviour
     [HideInInspector]
     public bool IsCompleted, IsFail;
 
+    public GameObject FinalParticles;
     public List<GameObject> AllCoins_list;
     public List<ParticleSystem> CommonDamageEffect_list;
     public List<ParticleSystem> enemy1Die_effect;
@@ -44,6 +45,8 @@ public class GameHandler : MonoBehaviour
     void Start()
     {
         Instance = this;
+
+        SoundManager.Instance.PlayBg_Clip(SoundManager.Instance.gameplayClip);
 
         //iTween.MoveTo(MainPlayer.gameObject, iTween.Hash("y", 10, "time", 3, "easetype", iTween.EaseType.easeInBack));
 
@@ -115,10 +118,15 @@ public class GameHandler : MonoBehaviour
         
         UiHandler.Instance.Messagertxt_obj.gameObject.SetActive(true);
         yield return new WaitForSeconds(1.5f);
+        FinalParticles.SetActive(true);
+
 
         iTween.MoveTo(MainPlayer.gameObject,iTween.Hash("y",10,"time",2.5,"easetype",iTween.EaseType.easeInBack));
         yield return new WaitForSeconds(2f);
         UiHandler.Instance.LC_page.SetActive(true);
+
+        SoundManager.Instance.PlayBtn2_Clip(SoundManager.Instance.WinClip);
+
     }
 
 
@@ -128,7 +136,8 @@ public class GameHandler : MonoBehaviour
         UiHandler.Instance.Messagertxt_obj.gameObject.SetActive(true);
         yield return new WaitForSeconds(1.5f);
 
-       
+        SoundManager.Instance.PlayBtn2_Clip(SoundManager.Instance.FailClip);
+
         UiHandler.Instance.LF_page.SetActive(true);
     }
 
