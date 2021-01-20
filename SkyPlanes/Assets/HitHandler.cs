@@ -22,17 +22,50 @@ public class HitHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        switch (currentobjType)
+        if (other.transform.CompareTag("Player"))
         {
-            case ObjectType.coin:
-                if (other.transform.CompareTag("Player"))
-                {
-                    ValueObject.TotalCoins+= Coinval;
+            switch (currentobjType)
+            {
+                case ObjectType.coin:
+
+                    ValueObject.TotalCoins += Coinval;
                     gameObject.SetActive(false);
-                  //  Debug.Log(ValueObject.TotalCoins);
-                   // Destroy(this.gameObject);
-                }
-                break;
+                    //  Debug.Log(ValueObject.TotalCoins);
+                    // Destroy(this.gameObject);
+
+                    break;
+
+                case ObjectType.powerup1:
+
+                    ShootingHandler.Instance.ShootingPower = 4;
+                    ShootingHandler.Instance.SwitchWeapons();
+
+                    gameObject.SetActive(false);
+
+                    break;
+
+                case ObjectType.powerup2:
+
+                    ShootingHandler.Instance.ShootingPower = 5;
+                    ShootingHandler.Instance.SwitchWeapons();
+
+                    gameObject.SetActive(false);
+
+                    break;
+
+                case ObjectType.medicine:
+                    ShootingHandler.Instance.PlayerHealth = 100;
+                    gameObject.SetActive(false);
+
+                    break;
+
+                case ObjectType.sheild:
+                    ShootingHandler.Instance.ActivateShield();
+
+                    gameObject.SetActive(false);
+
+                    break;
+            }
         }
 
     }

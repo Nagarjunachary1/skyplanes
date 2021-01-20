@@ -12,7 +12,11 @@ public class ShootingHandler : MonoBehaviour
     public int ShootingPower = 0;
 
     public GameObject[] ShootingMachine;
-    private float MainHelath;
+    [HideInInspector]
+    public float MainHelath;
+
+    public GameObject ShieldObj;
+    private bool IsInShield = false;
     private void OnEnable()
     {
         Bullets.PlayerDamageAmount += PlayerdamageNotification;
@@ -48,25 +52,41 @@ public class ShootingHandler : MonoBehaviour
 
     void PlayerdamageNotification(int val)
     {
-
-        if (PlayerHealth > 0)
+        if (!IsInShield && !GameHandler.Instance.IsCompleted && !GameHandler.Instance.IsFail)
         {
-            PlayerHealth -= val;
-           // Debug.Log("player damage " + PlayerHealth);
+
+            if (PlayerHealth > 0)
+            {
+                PlayerHealth -= val;
+                // Debug.Log("player damage " + PlayerHealth);
 
 
-            UiHandler.Instance.HealthBar.fillAmount = (PlayerHealth / MainHelath) * 1f;
+                UiHandler.Instance.HealthBar.fillAmount = (PlayerHealth / MainHelath) * 1f;
 
-        }
-        else
-        {
-            OnPlayerBlast();
-            Destroy(gameObject, 0.2f);
+            }
+            else
+            {
+                OnPlayerBlast();
+                Destroy(gameObject, 0.2f);
 
+            }
         }
     }
 
-    
+
+    public void ActivateShield()
+    {
+        ShieldObj.SetActive(true);
+        IsInShield = true;
+        StartCoroutine("DisableShield");
+    }
+
+    IEnumerator DisableShield()
+    {
+        yield return new WaitForSeconds(5);
+        ShieldObj.SetActive(false);
+        IsInShield = false;
+    }
     void OnPlayerBlast()
     {
         GameHandler.Instance.OnLevelFailFun();

@@ -838,7 +838,7 @@ MonoBehaviour:
   MainRootEnemy: {fileID: 359515833321973451}
   ParentObj: {fileID: 2114997722266635056}
   HelathObj: {fileID: 1294560973566490209}
-  Health: 80
+  Health: 200
   CoinSet: {fileID: 0}
   MainHelath: 0
   MboxCollider:

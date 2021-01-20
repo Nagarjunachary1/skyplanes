@@ -38,6 +38,7 @@ public class BossHandler : MonoBehaviour
         {
             MainBossGun.enabled = true;
             MainBossGun.GetComponent<BoxCollider>().enabled = true;
+            MainBossGun.transform.GetChild(1).gameObject.SetActive(true);
         }
     }
     // Start is called before the first frame update

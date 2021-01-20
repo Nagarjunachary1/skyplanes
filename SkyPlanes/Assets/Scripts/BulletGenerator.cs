@@ -31,24 +31,22 @@ public class BulletGenerator : MonoBehaviour
         if (IsPlayer)
         {
             InvokeRepeating("firebullets", 0.1f, FireDelay);
-           
-
         }
         else
         {
-
-           
             //StartCoroutine("firebullets", Random.Range(MinimumShootDelay, MinimumShootDelay));
             Invoke("firebullets", Random.Range(MinimumShootDelay, MaxShootDelay));
-
-
-         
-
 
         }
     }
 
-   
+
+    private void OnDisable()
+    {
+       // Debug.Log("cancel buelltsss ");
+              CancelInvoke("firebullets");
+
+    }
 
 
     public Bullets Temp_bullet;
@@ -59,8 +57,7 @@ public class BulletGenerator : MonoBehaviour
         if (GameHandler.Instance.IsCompleted || GameHandler.Instance.IsFail)
               CancelInvoke("firebullets");
 
-
-
+        
 
         if (!IsPlayer)
         {
@@ -93,13 +90,10 @@ public class BulletGenerator : MonoBehaviour
             Temp_bullet.BulletStrength = BulletStrength;
         }
       
-            
-
 
         if (!IsPlayer)
         {
             nextbulletdelay = Random.Range(MinimumShootDelay, MaxShootDelay);
-
            // Debug.Log("delay "+nextbulletdelay);
             Invoke("firebullets", nextbulletdelay);
 
