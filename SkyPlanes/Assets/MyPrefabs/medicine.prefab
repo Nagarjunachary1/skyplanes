@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8016765562310352282}
   - component: {fileID: 2196570607251501407}
   - component: {fileID: 515717738748505780}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: medicine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,6 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentobjType: 3
+  Coinval: 1
 --- !u!54 &515717738748505780
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -137,7 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2628377264158393752}
   - component: {fileID: 4638285538428419982}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bubble (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +219,7 @@ GameObject:
   - component: {fileID: 5183026634022574131}
   - component: {fileID: 968483053729958038}
   - component: {fileID: 2943620254602897342}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: New Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,7 +310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2462611650634694716}
   - component: {fileID: 6833628554654803818}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +390,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7151647735959607090}
   - component: {fileID: 8356347601668735236}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bubble (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

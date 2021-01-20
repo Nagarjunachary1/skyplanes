@@ -805,6 +805,8 @@ MonoBehaviour:
   ParentObj: {fileID: 3664229506172716009}
   HelathObj: {fileID: 7064339166012131697}
   Health: 100
+  BlastObj: {fileID: 2883991691006050488, guid: b8f8ba26b2a96dc4a87a7c6fd53c64f7,
+    type: 3}
   CoinSet: {fileID: 2603955627656156309, guid: 701cdb5ac48f44f43830562766eca863, type: 3}
   MainHelath: 0
   MboxCollider:
@@ -1886,6 +1888,8 @@ MonoBehaviour:
   ParentObj: {fileID: 8422684039498907824}
   HelathObj: {fileID: 1263477171556780335}
   Health: 100
+  BlastObj: {fileID: 2883991691006050488, guid: b8f8ba26b2a96dc4a87a7c6fd53c64f7,
+    type: 3}
   CoinSet: {fileID: 2603955627656156309, guid: 701cdb5ac48f44f43830562766eca863, type: 3}
   MainHelath: 0
   MboxCollider:
@@ -2255,6 +2259,8 @@ MonoBehaviour:
   ParentObj: {fileID: 598064987433609229}
   HelathObj: {fileID: 7884139927137394503}
   Health: 1000
+  BlastObj: {fileID: 2883991691006050488, guid: c3b349fc0251a5743a57f31ff160718b,
+    type: 3}
   CoinSet: {fileID: 8788672449408334766, guid: 6ff1aadc8e0d3ef44a0b92d0cb4fab20, type: 3}
   MainHelath: 0
   MboxCollider:

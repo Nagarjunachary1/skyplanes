@@ -32,6 +32,7 @@ public class HitHandler : MonoBehaviour
                     gameObject.SetActive(false);
                     //  Debug.Log(ValueObject.TotalCoins);
                     // Destroy(this.gameObject);
+                    playEffect(0);
 
                     break;
 
@@ -42,6 +43,9 @@ public class HitHandler : MonoBehaviour
 
                     gameObject.SetActive(false);
 
+                    playEffect(1);
+
+
                     break;
 
                 case ObjectType.powerup2:
@@ -51,11 +55,15 @@ public class HitHandler : MonoBehaviour
 
                     gameObject.SetActive(false);
 
+                    playEffect(1);
+
                     break;
 
                 case ObjectType.medicine:
                     ShootingHandler.Instance.PlayerHealth = 100;
                     gameObject.SetActive(false);
+
+                    playEffect(1);
 
                     break;
 
@@ -63,10 +71,24 @@ public class HitHandler : MonoBehaviour
                     ShootingHandler.Instance.ActivateShield();
 
                     gameObject.SetActive(false);
+                    playEffect(1);
 
                     break;
             }
         }
 
+    }
+    private ParticleSystem TempEffectObj;
+    void playEffect(int numm)
+    {
+
+
+        TempEffectObj = GameObject.Instantiate(GameHandler.Instance.PowerEffect_list[numm]); 
+        // Temp_coins.gameObject.SetActive(true);
+        TempEffectObj.transform.position = this.transform.position;
+        TempEffectObj.Play();
+
+
+        
     }
 }

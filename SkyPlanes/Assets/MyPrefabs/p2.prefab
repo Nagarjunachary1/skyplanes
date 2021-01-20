@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5934934204576853843}
   - component: {fileID: 3360820016238151685}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 4007117668908955484}
   - component: {fileID: 9007574452585687033}
   - component: {fileID: 6388422109895297233}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: New Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 2247488373844898549}
   - component: {fileID: 7929187877228224048}
   - component: {fileID: -3768850848464176386}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: p2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,6 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentobjType: 2
+  Coinval: 1
 --- !u!54 &-3768850848464176386
 Rigidbody:
   m_ObjectHideFlags: 0

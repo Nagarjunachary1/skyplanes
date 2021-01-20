@@ -6,6 +6,7 @@ public class ShootingHandler : MonoBehaviour
 {
     [Tooltip("contains player shooting and hit data")]
     public int PlayerHealth = 100;
+    public GameObject BlastObbj;
     public static ShootingHandler Instance;
     public TextMesh PlayerStrength;
     [Range(1,5)]
@@ -49,7 +50,7 @@ public class ShootingHandler : MonoBehaviour
 
         
     }
-
+    private bool inblink = false;
     void PlayerdamageNotification(int val)
     {
         if (!IsInShield && !GameHandler.Instance.IsCompleted && !GameHandler.Instance.IsFail)
@@ -62,10 +63,23 @@ public class ShootingHandler : MonoBehaviour
 
 
                 UiHandler.Instance.HealthBar.fillAmount = (PlayerHealth / MainHelath) * 1f;
+                if (PlayerHealth<20 && inblink==false)
+                {
+                    inblink = true;
+                    UiHandler.Instance.healthBlinkObj.SetActive(true);
+                }
+                if (PlayerHealth > 20 && inblink == true)
+                {
+                    inblink = false;
+                    UiHandler.Instance.healthBlinkObj.SetActive(false);
+                }
+
 
             }
             else
             {
+                UiHandler.Instance.healthBlinkObj.SetActive(false);
+
                 OnPlayerBlast();
                 Destroy(gameObject, 0.2f);
 
@@ -87,8 +101,15 @@ public class ShootingHandler : MonoBehaviour
         ShieldObj.SetActive(false);
         IsInShield = false;
     }
+    private GameObject TempDamgeObj;
     void OnPlayerBlast()
     {
+        GameHandler.Instance.IsFail = true;
+        TempDamgeObj = GameObject.Instantiate(BlastObbj);
+
+        TempDamgeObj.transform.position = this.transform.position;
+
+     
         GameHandler.Instance.OnLevelFailFun();
     }
     // Update is called once per frame

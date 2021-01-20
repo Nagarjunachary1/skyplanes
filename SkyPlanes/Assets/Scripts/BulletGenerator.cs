@@ -70,7 +70,7 @@ public class BulletGenerator : MonoBehaviour
                 Temp_bullet.transform.position = BulletPoses[i].transform.position;
                 Temp_bullet.transform.localEulerAngles = BulletPoses[i].transform.eulerAngles;
 
-                if (LookatPlayer)
+                if (LookatPlayer && GameHandler.Instance.MainPlayer!=null)
                 {
                     Temp_bullet.transform.LookAt(GameHandler.Instance.MainPlayer.transform);
                 }

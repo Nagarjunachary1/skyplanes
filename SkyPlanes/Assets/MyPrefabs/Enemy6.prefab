@@ -128,7 +128,7 @@ MonoBehaviour:
   MBullet: {fileID: 7615727429659553832, guid: 3ca8999a781959e4c95976f812d8cdbb, type: 3}
   MoveDirection: {x: 0, y: 0, z: 180}
   BulletSpeed: 5
-  BulletStrength: 1
+  BulletStrength: 2
   FireDelay: 0.1
   MinimumShootDelay: 0.5
   MaxShootDelay: 1
@@ -839,6 +839,8 @@ MonoBehaviour:
   ParentObj: {fileID: 2114997722266635056}
   HelathObj: {fileID: 1294560973566490209}
   Health: 200
+  BlastObj: {fileID: 2883991691006050488, guid: c3b349fc0251a5743a57f31ff160718b,
+    type: 3}
   CoinSet: {fileID: 0}
   MainHelath: 0
   MboxCollider:
@@ -855,8 +857,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.71044177, y: 0.39063606, z: 0.61}
-  m_Center: {x: 0.0034812286, y: 0.4575919, z: 0}
+  m_Size: {x: 3.7137868, y: 0.652832, z: 0.61}
+  m_Center: {x: -0.04419099, y: 0.5886899, z: 0}
 --- !u!65 &4009590734666638157
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -868,8 +870,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1798893, y: 0.48512533, z: 0.61}
-  m_Center: {x: -0.0037547327, y: 0.00051115593, z: 0}
+  m_Size: {x: 1.1798893, y: 1.295552, z: 0.61}
+  m_Center: {x: -0.0037547327, y: -0.40470243, z: 0}
 --- !u!54 &102019405735010889
 Rigidbody:
   m_ObjectHideFlags: 0

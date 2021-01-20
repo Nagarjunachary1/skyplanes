@@ -405,7 +405,7 @@ MonoBehaviour:
   MBullet: {fileID: 7615727429659553832, guid: 3ca8999a781959e4c95976f812d8cdbb, type: 3}
   MoveDirection: {x: 0, y: 0, z: 0}
   BulletSpeed: 5
-  BulletStrength: 1
+  BulletStrength: 2
   FireDelay: 0.3
   MinimumShootDelay: 0.5
   MaxShootDelay: 2
@@ -793,6 +793,8 @@ MonoBehaviour:
   ParentObj: {fileID: 6154984507090691384}
   HelathObj: {fileID: 6468341890798934121}
   Health: 15
+  BlastObj: {fileID: 2883991691006050488, guid: 4d4e3f19577f0fc4c862bdac694bc403,
+    type: 3}
   CoinSet: {fileID: 0}
   MainHelath: 0
   MboxCollider:

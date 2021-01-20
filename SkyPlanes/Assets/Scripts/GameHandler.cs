@@ -11,11 +11,20 @@ public class GameHandler : MonoBehaviour
     public GameObject All_BulletsHolder;
     public GameObject All_CoinsHolder;
     public GameObject CoinObj;
+    public ParticleSystem NormalDamge_ps;
     public Enemies[] AllEnemies;
     [HideInInspector]
     public bool IsCompleted, IsFail;
 
     public List<GameObject> AllCoins_list;
+    public List<ParticleSystem> CommonDamageEffect_list;
+    public List<ParticleSystem> enemy1Die_effect;
+
+    public List<ParticleSystem> PowerEffect_list;
+
+    [HideInInspector]
+    public int effect_count = 0;
+    public int CoinsCountval = 0;
 
     private void OnEnable()
     {
@@ -117,10 +126,18 @@ public class GameHandler : MonoBehaviour
 
 
 
-
+   
     // Update is called once per frame
     void Update()
     {
         
     }
+}
+
+[System.Serializable]
+public class NestedClass 
+{
+
+    public List<ParticleSystem> vall;
+
 }

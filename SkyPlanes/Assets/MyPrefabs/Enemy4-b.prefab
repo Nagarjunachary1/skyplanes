@@ -170,6 +170,8 @@ MonoBehaviour:
   ParentObj: {fileID: 2824838186942117261}
   HelathObj: {fileID: 3142694765000231132}
   Health: 80
+  BlastObj: {fileID: 2883991691006050488, guid: 0ef0435b3d3b8f54f886ade918f8b339,
+    type: 3}
   CoinSet: {fileID: 8788672449408334766, guid: 6ff1aadc8e0d3ef44a0b92d0cb4fab20, type: 3}
   MainHelath: 0
   MboxCollider:

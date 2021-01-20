@@ -134,7 +134,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2032118638759236029}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.74, y: 5.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7245667291582089682}
@@ -515,6 +515,8 @@ MonoBehaviour:
   ParentObj: {fileID: 2032118638759236029}
   HelathObj: {fileID: 1197190330018229484}
   Health: 3
+  BlastObj: {fileID: 2883991691006050488, guid: b8f8ba26b2a96dc4a87a7c6fd53c64f7,
+    type: 3}
   CoinSet: {fileID: 0}
   MainHelath: 0
   MboxCollider:

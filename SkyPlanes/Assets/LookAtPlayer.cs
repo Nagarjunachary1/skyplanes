@@ -13,6 +13,9 @@ public class LookAtPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameHandler.Instance.IsCompleted || GameHandler.Instance.IsFail)
+            return;
+
         transform.LookAt(GameHandler.Instance.MainPlayer.transform); 
     }
 }
