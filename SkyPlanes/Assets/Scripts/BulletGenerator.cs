@@ -4,53 +4,109 @@ using UnityEngine;
 
 public class BulletGenerator : MonoBehaviour
 {
+    public bool IsPlayer = false;
     public Bullets MBullet;
-    public float FireDelay = 0.3f;
     public Vector3 MoveDirection;
     public float BulletSpeed;
+    public int BulletStrength = 1;
 
+    [Header("For Player")]
+    public float FireDelay = 0.3f;
+
+
+    [Header("For Enemies")]
+    public float MinimumShootDelay;
+    public float  MaxShootDelay;
+    public bool LookatPlayer = false;
     public int MaxPool_bullets = 25;
-    public List<Bullets> Bullets_list = new List<Bullets>();
+
+    public Transform[] BulletPoses;
+
+    public float nextbulletdelay;
+  // public List<Bullets> Bullets_list = new List<Bullets>();
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("firebullets", 0.1f, FireDelay);
-    }
-
-    private Bullets Temp_bullet;
-    private int B_count;
-    void firebullets()
-    {
-        if (Bullets_list.Count<= MaxPool_bullets)
+        if (IsPlayer)
         {
-            Temp_bullet = GameObject.Instantiate(MBullet);
-            Temp_bullet.transform.parent = GameHandler.Instance.All_BulletsHolder.transform;
-            Bullets_list.Add(Temp_bullet);
+            InvokeRepeating("firebullets", 0.1f, FireDelay);
+           
+
         }
         else
         {
-            Temp_bullet = Bullets_list[B_count];
-            Temp_bullet.gameObject.SetActive(true);
-            B_count++;
-            if (B_count>= MaxPool_bullets)
+
+           
+            //StartCoroutine("firebullets", Random.Range(MinimumShootDelay, MinimumShootDelay));
+            Invoke("firebullets", Random.Range(MinimumShootDelay, MaxShootDelay));
+
+
+         
+
+
+        }
+    }
+
+   
+
+
+    public Bullets Temp_bullet;
+    private int B_count;
+    void firebullets()
+    {
+
+        if (GameHandler.Instance.IsCompleted || GameHandler.Instance.IsFail)
+              CancelInvoke("firebullets");
+
+
+
+
+        if (!IsPlayer)
+        {
+            for (int i = 0; i < BulletPoses.Length; i++)
             {
-                B_count = 0;
+                Temp_bullet = GameObject.Instantiate(MBullet);
+                Temp_bullet.transform.parent = GameHandler.Instance.All_BulletsHolder.transform;
+
+
+                Temp_bullet.transform.position = BulletPoses[i].transform.position;
+                Temp_bullet.transform.localEulerAngles = BulletPoses[i].transform.eulerAngles;
+
+                if (LookatPlayer)
+                {
+                    Temp_bullet.transform.LookAt(GameHandler.Instance.MainPlayer.transform);
+                }
+                Temp_bullet.Speed = BulletSpeed;
+                Temp_bullet.BulletStrength = BulletStrength;
             }
         }
-       
-        Temp_bullet.transform.position = transform.position;
-        Temp_bullet.transform.localEulerAngles = MoveDirection;
-        Temp_bullet.Speed = BulletSpeed;
-        
+        else
+        {
+            Temp_bullet = GameObject.Instantiate(MBullet);
+            Temp_bullet.transform.parent = GameHandler.Instance.All_BulletsHolder.transform;
 
+
+            Temp_bullet.transform.position = transform.position;
+            Temp_bullet.transform.localEulerAngles = MoveDirection;
+            Temp_bullet.Speed = BulletSpeed;
+            Temp_bullet.BulletStrength = BulletStrength;
+        }
+      
+            
+
+
+        if (!IsPlayer)
+        {
+            nextbulletdelay = Random.Range(MinimumShootDelay, MaxShootDelay);
+
+           // Debug.Log("delay "+nextbulletdelay);
+            Invoke("firebullets", nextbulletdelay);
+
+        }
 
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
 }

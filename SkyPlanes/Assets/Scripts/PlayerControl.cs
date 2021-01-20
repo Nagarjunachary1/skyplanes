@@ -7,8 +7,7 @@ public class PlayerControl : MonoBehaviour
 
 
     public float DragSpeed = 1.1f;
-    private Vector3 initialPosition,mousePos, mouseDragPos;
-    
+    private Vector3 initialPosition, mousePos, mouseDragPos;
 
 
 
@@ -24,13 +23,15 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
 
+        if (GameHandler.Instance.IsCompleted || GameHandler.Instance.IsFail)
+            return;
 
 
         MControls();
         RestricToBoundaries();
 
 
-    
+
     }
 
 
@@ -55,7 +56,6 @@ public class PlayerControl : MonoBehaviour
             if (mouseDragPos != mousePos)
             {
                 transform.position = mouseDragPos * (DragSpeed) + initialPosition;
-
 
             }
         }

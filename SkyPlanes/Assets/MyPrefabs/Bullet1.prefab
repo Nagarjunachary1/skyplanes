@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8801509089360894374}
   - component: {fileID: 7615727429659553832}
   - component: {fileID: -3659910436458288466}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Bullet1
   m_TagString: playerbullet
   m_Icon: {fileID: 0}
@@ -28,13 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5450024309737213349}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.07668632, y: -1.056, z: 0}
-  m_LocalScale: {x: 0.022899795, y: 0.12684159, z: 0.056536872}
+  m_LocalScale: {x: 0.022899795, y: 0.045877337, z: 0.1558665}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &7237738933994436728
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
+  BulletStrength: 1
   MRigidbody: {fileID: -3659910436458288466}
 --- !u!54 &-3659910436458288466
 Rigidbody:

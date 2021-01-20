@@ -8,6 +8,12 @@ TagManager:
   - border
   - Undefined
   - playerbullet
+  - enemybullet
+  - coin
+  - powerup1
+  - powerup2
+  - sheild
+  - health
   layers:
   - Default
   - TransparentFX
@@ -19,9 +25,9 @@ TagManager:
   - 
   - player
   - enemy
-  - 
-  - 
-  - 
+  - playerbullet
+  - powertype
+  - enemybullet
   - 
   - 
   - 

@@ -2,24 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemies : MonoBehaviour
+public class MoveIt : MonoBehaviour
 {
-    public Animator M_anim;
-    public float Speed;
-   
-
+    public Vector3 SpeedDirection;
     // Start is called before the first frame update
     void Start()
     {
-        
-        M_anim.speed = Speed;
     }
-
-   
 
     // Update is called once per frame
     void Update()
     {
+        transform.Translate(SpeedDirection*Time.deltaTime);
 
     }
 }

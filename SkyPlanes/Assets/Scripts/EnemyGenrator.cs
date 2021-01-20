@@ -17,6 +17,9 @@ public class EnemyGenrator : MonoBehaviour
 
     public EnemyAnim AnimPath;
 
+    [Tooltip("optional field to set next wave elements")]
+    [Header("optional")]
+    public GameObject NextWaveObj;
     public enum EnemyAnim
     {
         random0,path1,path2,path3,path4,path5,path6
@@ -37,14 +40,20 @@ public class EnemyGenrator : MonoBehaviour
     private Vector3 RandomVect;
     void Enemy_Genrate()
     {
+        if (GameHandler.Instance.IsFail)
+        {
+            CancelInvoke("Enemy_Genrate");
+            return;
+        }
         if (Mcount >= 1)
         {
             Temp_enemies = GameObject.Instantiate(GameHandler.Instance.AllEnemies[EnemyObj.GetHashCode()]);
             Temp_enemies.Speed = Enemy_speed;
             Temp_enemies.name = "e" + Mcount;
+            Temp_enemies.NextWave = NextWaveObj;
             if (AnimPath == EnemyAnim.random0)
             {
-                RandomVect = new Vector3(Random.Range(-2.5f,2.5f), Random.Range(9, 10),0);
+                RandomVect = new Vector3(Random.Range(-2f,2f), Random.Range(7, 8),0);
                 Temp_enemies.transform.position = RandomVect;
             }
             else

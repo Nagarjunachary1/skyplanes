@@ -171,13 +171,13 @@ AnimatorStateMachine:
     m_Position: {x: 248.698, y: -235.10199, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2672627138337527699}
-    m_Position: {x: 290, y: -50, z: 0}
+    m_Position: {x: 1720, y: 380, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6550976276138049019}
-    m_Position: {x: 356.0371, y: 48.579895, z: 0}
+    m_Position: {x: 310, y: -20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5268076457809081597}
-    m_Position: {x: 317.70178, y: 152.08545, z: 0}
+    m_Position: {x: 320, y: 130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2191588506347130145}
     m_Position: {x: 352.70178, y: 217.08545, z: 0}
@@ -210,31 +210,31 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: path1
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: path2
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: path3
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: path4
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
